@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+	<head>
+		<title>lab 2</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="/lab3films/static/bootstrap.min.css">
+		<script src="/lab3films/static/jquery.min.js"></script>
+		<script src="/lab3films/static/jquery.maskedinput.min.js"></script>
+		<script src="/lab3films/static/jquery.validate.min.js"></script>
+		<script src="/lab3films/static/scripts.js"></script>
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/actors/get">Actors</a></li>
+						<li><a href="/directors/get">Directors</a></li>
+						<li><a href="/studios/get">Studios</a></li>
+						<li><a href="/films/get">Films</a></li>
+					</ul>
+				</div><!--/ nav -->
+			</div>
+		</div>
+		<div style="margin-top: 100px" class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<td class="">name</td>
+								<td class="">country</td>
+								<td class="">birth year</td>
+								<td class="">ganre</td>
+							</tr>
+						</thead>
+						<tbody>
+							{% for row in table %}
+								<tr class="{{ row.id }}">
+									<td class="name">{{ row.name }}</td>
+									<td class="country">{{ row.country }}</td>
+									<td class="birth_year">{{ row.birth_year }}</td>
+									<td class="ganre">{{ row.ganre }}</td>
+									<td><a href="http://localhost:8000/directors/update?id={{row.id}}" class="update-director btn-link">update</a></td>
+									<td><a href="http://localhost:8000/directors/delete?id={{row.id}}" class="btn-link">delete</a></td>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div><!-- / table -->
+			<div class="row">
+				<div class="col-md-12">
+					<form id="add-director" role="form">
+						<input type="text" name="name" class=" form-control input-md" placeholder="name">
+						<input type="text" name="country" class=" form-control input-md" placeholder="country">
+						<input type="text" name="birth_year" class=" form-control input-md" placeholder="birth_year">
+						<input type="text" name="ganre" class="ganre form-control input-md" placeholder="ganre">
+						<button type="button" class="add-director btn btn-primary">new director</button>
+					</form>
+					<form id="upd-director" style="margin-top: 25px; display: none" role="form">
+						<input type="text" name="name" class="name form-control input-md" placeholder="name">
+						<input type="text" name="country" class="country form-control input-md" placeholder="country">
+						<input type="text" name="ganre" class="ganre form-control input-md" placeholder="ganre">
+						<button type="button" class="upd-director btn btn-primary">update director</button>
+					</form>
+				</div>
+			</div><!-- / form -->
+		</div><!-- / container -->
+		<div style="margin-top: 50px"></div>
+	</body>
+</html>
