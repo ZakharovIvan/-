@@ -1,0 +1,19 @@
+{
+	"actors": [
+		{"name": "Actor1", "country": "Country1", "language": "Language1", "birth_year": "1994", "ganre": "Ganre1"},
+		{"name": "Actor2", "country": "Country2", "language": "Language1", "birth_year": "1980", "ganre": "Ganre2"},
+		{"name": "Actor3", "country": "Country3", "language": "Language2", "birth_year": "2000", "ganre": "Ganre3"},
+		{"name": "Actor4", "country": "Country1", "language": "Language1", "birth_year": "1994", "ganre": "Ganre1"}
+	],
+	"studios": [
+		{"name": "Studio1", "country": "Country1", "creation_year": "1990"},
+		{"name": "Studio2", "country": "Country2", "creation_year": "2000"},
+		{"name": "Studio3", "country": "Country2", "creation_year": "1985"}
+	],
+	"directors": [
+		{"name": "Director1", "country": "Country1", "birth_year": "1993", "ganre": "Ganre2"},
+		{"name": "Director2", "country": "Country2", "birth_year": "1974", "ganre": "Ganre1"},
+		{"name": "Director3", "country": "Country3", "birth_year": "1988", "ganre": "Ganre1"},
+		{"name": "Director4", "country": "Country2", "birth_year": "1955", "ganre": "Ganre3"}
+	]
+}
